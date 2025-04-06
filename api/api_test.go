@@ -14,6 +14,13 @@ import (
 	"github.com/stretchr/testify/require"
 )
 
+// review: it's also useful to have tests for different edge cases:
+//   - package not found (404)
+//   - version not found
+//   - invalid version string
+//   - circular dependency (if supported)
+//
+// idea: use table-driven tests to make these cases scalable and organized
 func TestPackageHandler(t *testing.T) {
 	handler := api.New()
 	server := httptest.NewServer(handler)
