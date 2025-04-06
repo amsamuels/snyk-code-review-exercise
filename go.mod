@@ -1,5 +1,6 @@
 module github.com/snyk/snyk-code-review-exercise
 
+// idea: update the go version to latest config uses 1.17
 go 1.16
 
 require (
